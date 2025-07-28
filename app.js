@@ -6,7 +6,7 @@ import fetch from "node-fetch";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors("*"));
 
 app.get("/weather", async (req, res) => {
   const city = req.query.city?.trim();
@@ -36,6 +36,10 @@ app.get("/weather", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }
+});
+
+app.get("/", (req, res) => {
+  res.send("Weather API is working!");
 });
 
 export default app;
