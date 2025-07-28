@@ -38,4 +38,8 @@ app.get("/weather", async (req, res) => {
   }
 });
 
+app.get("/",(req,res)=>{
+  res.send("Weather API is working!");
+});
+
 export default app;
