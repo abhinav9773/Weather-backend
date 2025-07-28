@@ -6,7 +6,7 @@ import fetch from "node-fetch";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors('*'));
 
 app.get("/weather", async (req, res) => {
   const city = req.query.city?.trim();
