@@ -38,11 +38,7 @@ app.get("/weather", async (req, res) => {
   }
 });
 
-<<<<<<< HEAD
 app.get("/", (req, res) => {
-=======
-app.get("/",(req,res)=>{
->>>>>>> 4b78b4cf7490db53119c3e54103bb57f28622441
   res.send("Weather API is working!");
 });
 
